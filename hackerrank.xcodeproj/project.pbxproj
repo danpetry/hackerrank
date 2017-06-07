@@ -9,9 +9,11 @@
 /* Begin PBXBuildFile section */
 		D71B2C0D1ECA2CC100AF8FE4 /* libgtest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D71B2C0C1ECA2CC100AF8FE4 /* libgtest.a */; };
 		D71B2C0F1ECA2CD900AF8FE4 /* libhayai_main.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D71B2C0E1ECA2CD900AF8FE4 /* libhayai_main.a */; };
+		D78604B51EE5F91900D569D3 /* myQueue.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D78604B31EE5F91900D569D3 /* myQueue.cpp */; };
 		D7D519361EE19431005877DE /* hackerrank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7D519321EE19431005877DE /* hackerrank.cpp */; };
 		D7D519371EE19431005877DE /* hackerrankTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7D519341EE19431005877DE /* hackerrankTest.cpp */; };
 		D7D519381EE19431005877DE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7D519351EE19431005877DE /* main.cpp */; };
+		D7F1382F1EE88DE9000981F2 /* myStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7F1382D1EE88DE9000981F2 /* myStack.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -30,10 +32,14 @@
 		D71B2C011ECA2AAC00AF8FE4 /* hackerrank */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = hackerrank; sourceTree = BUILT_PRODUCTS_DIR; };
 		D71B2C0C1ECA2CC100AF8FE4 /* libgtest.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libgtest.a; path = hackerrank/lib/builds/gtest/Build/Products/Debug/libgtest.a; sourceTree = "<group>"; };
 		D71B2C0E1ECA2CD900AF8FE4 /* libhayai_main.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libhayai_main.a; path = hackerrank/lib/hayai/src/libhayai_main.a; sourceTree = "<group>"; };
+		D78604B31EE5F91900D569D3 /* myQueue.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = myQueue.cpp; path = hackerrank/myQueue.cpp; sourceTree = "<group>"; };
+		D78604B41EE5F91900D569D3 /* myQueue.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = myQueue.hpp; path = hackerrank/myQueue.hpp; sourceTree = "<group>"; };
 		D7D519321EE19431005877DE /* hackerrank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hackerrank.cpp; path = hackerrank/hackerrank.cpp; sourceTree = "<group>"; };
 		D7D519331EE19431005877DE /* hackerrank.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = hackerrank.hpp; path = hackerrank/hackerrank.hpp; sourceTree = "<group>"; };
 		D7D519341EE19431005877DE /* hackerrankTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = hackerrankTest.cpp; path = hackerrank/hackerrankTest.cpp; sourceTree = "<group>"; };
 		D7D519351EE19431005877DE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = hackerrank/main.cpp; sourceTree = "<group>"; };
+		D7F1382D1EE88DE9000981F2 /* myStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = myStack.cpp; path = hackerrank/myStack.cpp; sourceTree = "<group>"; };
+		D7F1382E1EE88DE9000981F2 /* myStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = myStack.hpp; path = hackerrank/myStack.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +88,10 @@
 				D7D519331EE19431005877DE /* hackerrank.hpp */,
 				D7D519341EE19431005877DE /* hackerrankTest.cpp */,
 				D7D519351EE19431005877DE /* main.cpp */,
+				D78604B31EE5F91900D569D3 /* myQueue.cpp */,
+				D78604B41EE5F91900D569D3 /* myQueue.hpp */,
+				D7F1382D1EE88DE9000981F2 /* myStack.cpp */,
+				D7F1382E1EE88DE9000981F2 /* myStack.hpp */,
 			);
 			name = hackerrank;
 			sourceTree = "<group>";
@@ -146,6 +156,8 @@
 				D7D519361EE19431005877DE /* hackerrank.cpp in Sources */,
 				D7D519371EE19431005877DE /* hackerrankTest.cpp in Sources */,
 				D7D519381EE19431005877DE /* main.cpp in Sources */,
+				D7F1382F1EE88DE9000981F2 /* myStack.cpp in Sources */,
+				D78604B51EE5F91900D569D3 /* myQueue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

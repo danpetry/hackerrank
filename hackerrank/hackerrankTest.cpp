@@ -12,6 +12,7 @@
 #include <gtest/gtest.h>
 #include <vector>
 #include <string>
+#include "myQueue.hpp"
 
 using namespace std;
 
@@ -35,7 +36,7 @@ TEST(DISABLE_hackerrank, factorial){
 }
 
 
-TEST(hackerrank, balanced_brackets){
+TEST(DISABLE_hackerrank, balanced_brackets){
     int t = 3;
     
     bool expectedAnswers[3] = {true, false, true};
@@ -51,7 +52,28 @@ TEST(hackerrank, balanced_brackets){
     
 }
 
-//BENCHMARK(DISABLE_hackerrank, ransom_note, 1000, 100)
+TEST(DISABLE_hackerrank, two_stack_queue){
+    MyQueue q1;
+    int q, type, x;
+    cin >> q;
+    
+    for(int i = 0; i < q; i++) {
+        cin >> type;
+        if(type == 1) {
+            cin >> x;
+            q1.push(x);
+        }
+        else if(type == 2) {
+            q1.pop();
+        }
+        else cout << q1.front() << endl;
+    }
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */
+
+
+}
+
+//BENCHMARK(hackerrank, balanced_brackets, 100, 100)
 //{
-//    hackerrank.ransom_note(magazine, ransom);
+//    hackerrank.is_balanced("{{[[(())]]}}");
 //}

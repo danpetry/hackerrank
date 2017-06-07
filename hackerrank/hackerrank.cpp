@@ -10,7 +10,10 @@
 #include <unordered_map>
 #include <map>
 #include <iostream>
+#include "myStack.hpp"
+//#include <stack>
 
+using namespace std;
 
 hackerrank::hackerrank() {}
 
@@ -38,53 +41,9 @@ int hackerrank::factorial(int val){
 
 bool hackerrank::is_balanced(string expression){
     
-    class stack{
-        
-        struct node{
-            node* next;
-            char character;
-            node(char character){
-                this->character = character;
-                this->next = nullptr;
-            }
-        };
-        node* head;
-        
-    public:
-        int numberOfNodes;
-        
-        stack(){
-            this->head = nullptr;
-            this->numberOfNodes = 0;
-        }
-        
-        void push(char character){
-            node* newNode = new node(character);
-            
-            newNode->next = head;
-            head = newNode;
-            numberOfNodes++;
-            return;
-        }
-        
-        char pop(){
-            char returnedChar;
-            if (head == nullptr){
-                returnedChar = 'k';
-            }else{
-                node* oldHead = head;
-                returnedChar = head->character;
-                head = head->next;
-                delete oldHead;
-                numberOfNodes--;
-            }
-            
-            return returnedChar;
-        }
-        
-    };
     
-    stack myStack;
+    
+    myStack myStack;
     
     for (auto& character : expression){
         if (character == '{'){
@@ -107,7 +66,7 @@ bool hackerrank::is_balanced(string expression){
         }
         
     }
-    
+
     if (myStack.numberOfNodes == 0){
         return true;
     }else{
