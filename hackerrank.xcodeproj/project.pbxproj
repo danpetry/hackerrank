@@ -14,6 +14,7 @@
 		D7D519371EE19431005877DE /* hackerrankTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7D519341EE19431005877DE /* hackerrankTest.cpp */; };
 		D7D519381EE19431005877DE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7D519351EE19431005877DE /* main.cpp */; };
 		D7F1382F1EE88DE9000981F2 /* myStack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7F1382D1EE88DE9000981F2 /* myStack.cpp */; };
+		D7F138321EE89108000981F2 /* myBinarySearchTree.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D7F138301EE89108000981F2 /* myBinarySearchTree.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -40,6 +41,8 @@
 		D7D519351EE19431005877DE /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = hackerrank/main.cpp; sourceTree = "<group>"; };
 		D7F1382D1EE88DE9000981F2 /* myStack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = myStack.cpp; path = hackerrank/myStack.cpp; sourceTree = "<group>"; };
 		D7F1382E1EE88DE9000981F2 /* myStack.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = myStack.hpp; path = hackerrank/myStack.hpp; sourceTree = "<group>"; };
+		D7F138301EE89108000981F2 /* myBinarySearchTree.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = myBinarySearchTree.cpp; path = hackerrank/myBinarySearchTree.cpp; sourceTree = "<group>"; };
+		D7F138311EE89108000981F2 /* myBinarySearchTree.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; name = myBinarySearchTree.hpp; path = hackerrank/myBinarySearchTree.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +95,8 @@
 				D78604B41EE5F91900D569D3 /* myQueue.hpp */,
 				D7F1382D1EE88DE9000981F2 /* myStack.cpp */,
 				D7F1382E1EE88DE9000981F2 /* myStack.hpp */,
+				D7F138301EE89108000981F2 /* myBinarySearchTree.cpp */,
+				D7F138311EE89108000981F2 /* myBinarySearchTree.hpp */,
 			);
 			name = hackerrank;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				D7D519371EE19431005877DE /* hackerrankTest.cpp in Sources */,
 				D7D519381EE19431005877DE /* main.cpp in Sources */,
 				D7F1382F1EE88DE9000981F2 /* myStack.cpp in Sources */,
+				D7F138321EE89108000981F2 /* myBinarySearchTree.cpp in Sources */,
 				D78604B51EE5F91900D569D3 /* myQueue.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

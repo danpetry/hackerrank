@@ -13,6 +13,7 @@
 #include <vector>
 #include <string>
 #include "myQueue.hpp"
+#include "myBinarySearchTree.hpp"
 
 using namespace std;
 
@@ -21,14 +22,14 @@ hackerrank hackerrank;
 vector<string> magazine = {"give", "me", "one", "grand", "today", "night"};
 vector<string> ransom = {"give", "one", "grand", "today"};
 
-TEST(DISABLE_hackerrank, ransom_note) {
+TEST(DISABLED_hackerrank, ransom_note) {
 
     EXPECT_EQ(true, hackerrank.ransom_note(magazine, ransom));
     
     
 }
 
-TEST(DISABLE_hackerrank, factorial){
+TEST(DISABLED_hackerrank, factorial){
     int input = 3;
     EXPECT_EQ(6, hackerrank.factorial(input));
     input = 9;
@@ -36,7 +37,7 @@ TEST(DISABLE_hackerrank, factorial){
 }
 
 
-TEST(DISABLE_hackerrank, balanced_brackets){
+TEST(DISABLED_hackerrank, balanced_brackets){
     int t = 3;
     
     bool expectedAnswers[3] = {true, false, true};
@@ -52,7 +53,7 @@ TEST(DISABLE_hackerrank, balanced_brackets){
     
 }
 
-TEST(DISABLE_hackerrank, two_stack_queue){
+TEST(DISABLED_hackerrank, two_stack_queue){
     MyQueue q1;
     int q, type, x;
     cin >> q;
@@ -71,6 +72,23 @@ TEST(DISABLE_hackerrank, two_stack_queue){
     /* Enter your code here. Read input from STDIN. Print output to STDOUT */
 
 
+}
+
+TEST(classTests, myBinarySearchTree){
+    node myTree(4);
+    myTree.insert(2);
+    myTree.insert(6);
+    myTree.insert(1);
+    myTree.insert(3);
+    myTree.insert(5);
+    myTree.insert(7);
+    
+    EXPECT_EQ(true, myTree.contains(6));
+    EXPECT_EQ(false, myTree.contains(8));
+
+    myTree.printInOrder();
+    
+    
 }
 
 //BENCHMARK(hackerrank, balanced_brackets, 100, 100)
