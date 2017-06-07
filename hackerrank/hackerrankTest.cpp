@@ -88,6 +88,8 @@ TEST(classTests, myBinarySearchTree){
 
     myTree.printInOrder();
     
+    EXPECT_EQ(true, myTree.amIABinarySearchTree());
+    
     
 }
 

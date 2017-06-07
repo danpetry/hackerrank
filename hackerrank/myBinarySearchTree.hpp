@@ -26,6 +26,10 @@ public:
     void insert(int value);
     bool contains(int value);
     void printInOrder();
+    bool amIABinarySearchTree();
+    int findMaxInSubtree();
+    int findMinInSubtree();
+
     
 };
 
