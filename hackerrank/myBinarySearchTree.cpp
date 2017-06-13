@@ -8,7 +8,8 @@
 
 #include "myBinarySearchTree.hpp"
 
-
+//TODO: faster search of tree (try with a three tiered one)
+//TODO: make functions nicer and clearer
 
 node::node(int data){
     this->data = data;
