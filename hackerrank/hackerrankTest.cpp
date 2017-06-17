@@ -74,65 +74,23 @@ TEST(DISABLED_hackerrank, two_stack_queue){
 
 }
 
-//bool checkBST_2(node* thisNode, int* maxBelow, int* minBelow){
-//    
-//    cout << "searching node with value " << thisNode->data << endl;
-//    
-//    
-//    if((thisNode->left == nullptr) && (thisNode->right == nullptr)){
-//        
-//        *maxBelow = thisNode->data;
-//        *minBelow = thisNode->data;
-//        cout << "both null pointers, and the values returned are " << *maxBelow << " and " << *minBelow << endl;
-//
-//        return true;
-//        
-//    }else if((thisNode->left != nullptr) && (thisNode->right != nullptr)){
-//        
-//        int maxLeft = 0, maxRight = 0, minLeft = 0, minRight = 0;
-//        
-//        if(!checkBST_2(thisNode->left, &maxLeft, &minLeft)) return false;
-//        if(!checkBST_2(thisNode->right, &maxRight, &minRight)) return false;
-//        
-//        if ((maxLeft < thisNode->data) && (minRight > thisNode->data)){
-//            *maxBelow = maxRight;
-//            *minBelow = minLeft;
-//            cout << "comparisons check out and the values returned are " << *maxBelow << " and " << *minBelow << endl;
-//
-//            return true;
-//        }else{
-//            return false;
-//        }
-//    }else{
-//        return false;
-//    }
-//}
 
-bool checkBST_2(node* thisNode, int* maxBelow, int* minBelow){
-    
-    cout << "searching node with value " << thisNode->data << endl;
-    
+//TODO: try it with a test for thisNode == nullptr, i.e., the leaf nodes call checkBST_2 as well. This would make the function neater
+//TODO: see if it works on the website without making sure that every node has two or zero children...
+//TODO: try and reduce the number of return statements
+bool checkBST_2(node* thisNode, int max, int min){
     
     if((thisNode->left == nullptr) && (thisNode->right == nullptr)){
         
-        *maxBelow = thisNode->data;
-        *minBelow = thisNode->data;
-        cout << "both null pointers, and the values returned are " << *maxBelow << " and " << *minBelow << endl;
-        
-        return true;
+        if (thisNode->data < max && thisNode->data > min){
+            return true;
+        }else{
+            return false;
+        }
         
     }else if((thisNode->left != nullptr) && (thisNode->right != nullptr)){
         
-        int maxLeft = 0, maxRight = 0, minLeft = 0, minRight = 0;
-        
-        if(!checkBST_2(thisNode->left, &maxLeft, &minLeft)) return false;
-        if(!checkBST_2(thisNode->right, &maxRight, &minRight)) return false;
-        
-        if ((maxLeft < thisNode->data) && (minRight > thisNode->data)){
-            *maxBelow = maxRight;
-            *minBelow = minLeft;
-            cout << "comparisons check out and the values returned are " << *maxBelow << " and " << *minBelow << endl;
-            
+        if(checkBST_2(thisNode->left, thisNode->data, min) && checkBST_2(thisNode->right, max, thisNode->data)){
             return true;
         }else{
             return false;
@@ -142,15 +100,14 @@ bool checkBST_2(node* thisNode, int* maxBelow, int* minBelow){
     }
 }
 
+
 bool checkBST(node* root) {
     
-    int maxBelow = 0;
-    int minBelow = 0;
-    
-    return checkBST_2(root, &maxBelow, &minBelow);
+    return checkBST_2(root, INT_MAX, INT_MIN);
 }
 
 TEST(classTests, myBinarySearchTree){
+    
     node myTree(4);
     myTree.insert(2);
     myTree.insert(6);
