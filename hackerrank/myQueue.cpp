@@ -5,6 +5,7 @@
 //  Created by Daniel Petry on 05/06/2017.
 //  Copyright © 2017 Daniel. All rights reserved.
 //
+//  A queue created from two stacks.
 
 #include "myQueue.hpp"
 #include <stack>

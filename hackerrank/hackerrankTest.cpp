@@ -75,53 +75,30 @@ TEST(DISABLED_hackerrank, two_stack_queue){
 }
 
 
-//TODO: try it with a test for thisNode == nullptr, i.e., the leaf nodes call checkBST_2 as well. This would make the function neater
-//TODO: see if it works on the website without making sure that every node has two or zero children...
-//TODO: try and reduce the number of return statements
-bool checkBST_2(node* thisNode, int max, int min){
+TEST(DISABLED_hackerrank, myBinarySearchTree){
     
-    if((thisNode->left == nullptr) && (thisNode->right == nullptr)){
-        
-        if (thisNode->data < max && thisNode->data > min){
-            return true;
-        }else{
-            return false;
-        }
-        
-    }else if((thisNode->left != nullptr) && (thisNode->right != nullptr)){
-        
-        if(checkBST_2(thisNode->left, thisNode->data, min) && checkBST_2(thisNode->right, max, thisNode->data)){
-            return true;
-        }else{
-            return false;
-        }
-    }else{
-        return false;
-    }
-}
+    node rootNode(4);
+    rootNode.insert(2);
+    rootNode.insert(6);
+    rootNode.insert(1);
+    rootNode.insert(3);
+    rootNode.insert(5);
+    rootNode.insert(7);
+    
+    EXPECT_EQ(true, rootNode.contains(6));
+    EXPECT_EQ(false, rootNode.contains(8));
 
-
-bool checkBST(node* root) {
+    rootNode.printInOrder();
     
-    return checkBST_2(root, INT_MAX, INT_MIN);
-}
-
-TEST(classTests, myBinarySearchTree){
+    EXPECT_EQ(true, rootNode.amIABinarySearchTree(INT_MAX, INT_MIN));
     
-    node myTree(4);
-    myTree.insert(2);
-    myTree.insert(6);
-    myTree.insert(1);
-    myTree.insert(3);
-    myTree.insert(5);
-    myTree.insert(7);
+    node badRootNode(8);
+    badRootNode.insert(5);
+    badRootNode.insert(20);
+    badRootNode.left->insert(12);
+    badRootNode.left->insert(3);
     
-    EXPECT_EQ(true, myTree.contains(6));
-    EXPECT_EQ(false, myTree.contains(8));
-
-    myTree.printInOrder();
-    
-    EXPECT_EQ(true, checkBST(&myTree));
+    EXPECT_EQ(false, badRootNode.amIABinarySearchTree(INT_MAX, INT_MIN));
     
     
 }

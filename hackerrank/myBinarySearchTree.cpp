@@ -69,79 +69,14 @@ void node::printInOrder(){
     
 }
 
-bool node::amIABinarySearchTree(){
-    std::cout << "amIABinarySearchTree: node value: " << data << endl;
 
+bool node::amIABinarySearchTree(int max, int min){
     
-    if ((left != nullptr) && (right != nullptr)){
-        if ((left->findMaxInSubtree() < data) && (left->amIABinarySearchTree() == true)
-            && (right->findMinInSubtree() > data) && (right->amIABinarySearchTree() == true)){
-            return true;
-        }else{
-            return false;
-        }
-    }
+    if ((data <= min) || (data >= max)) return false;
     
-    if ((left == nullptr) && (right == nullptr)) return true;
-    
-    return false;
-
-}
-
-int node::findMaxInSubtree(){
-    std::cout << "findMaxInSubtree: node value: " << data << endl;
-
-    
-    if (left == nullptr && right == nullptr){
-        return data;
-    }else{
-        int maxLeft = 0;
-        int maxRight = 0;
-        if (left != nullptr){
-            maxLeft = left->findMaxInSubtree();
-            
-        }
-        if (right != nullptr){
-            maxRight = right->findMaxInSubtree();
-        }
-        
-        if (maxLeft > maxRight){
-            return maxLeft;
-        }else{
-            return maxRight;
-        }
-
-    }
+    return ((left == nullptr) || left->amIABinarySearchTree(data, min)) && ((right == nullptr) || right->amIABinarySearchTree(max, data));
     
 }
-
-int node::findMinInSubtree(){
-    std::cout << "findMinInSubtree: node value: " << data << endl;
-    
-    if (left == nullptr && right == nullptr){
-        return data;
-    }else{
-        int minLeft = 0;
-        int minRight = 0;
-        if (left != nullptr){
-            minLeft = left->findMinInSubtree();
-            
-        }
-        if (right != nullptr){
-            minRight = right->findMinInSubtree();
-        }
-        
-        if (minLeft < minRight){
-            return minLeft;
-        }else{
-            return minRight;
-        }
-        
-    }
-    
-}
-
-
 
 
 
